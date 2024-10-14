@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:p1_donut_app_carlos_sanchez/Utilis/my_tab.dart';
-
+import "./tab/donut_Tab.dart";
+import './tab/pancake_Tab.dart';
+import './tab/pizza_Tab.dart';
+import './tab/burger_Tab.dart';
+import './tab/smoothie_Tab.dart';
 class HomePages extends StatefulWidget {
   const HomePages({super.key});
 
@@ -55,12 +59,12 @@ class _HomePagesState extends State <HomePages> {
         body: Column(
           children: [
             //texto " I want to it"
-            Padding(
-              padding: const EdgeInsets.all(24.0),
+             const Padding(
+              padding:  EdgeInsets.all(24.0),
               child: Row(
                 children: [
                   Text("I want to ", style: TextStyle(fontSize: 24)),
-                  Text("Eat",
+                  Text("eat",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -71,11 +75,14 @@ class _HomePagesState extends State <HomePages> {
             //Tab bar
             TabBar(tabs: myTabs),
             //Tab bar view
-            Expanded(
-              child: TabBarView(
-                children: myTabs.map((tab) => Center(child: tab)).toList(),
-              ),
-            ),
+            const Expanded(
+              child: TabBarView(children: [
+            DonutTab(),
+            BurgerTab(),
+            SmoothieTab(),
+            PancakeTab(),
+            PizzaTab()
+            ]))
             //Total del carrito
           ],
         ),

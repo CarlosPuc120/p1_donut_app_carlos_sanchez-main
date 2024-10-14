@@ -10,9 +10,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePages()
-       
+    return  MaterialApp(
+      home: const HomePages(),
+      theme: ThemeData(
+        tabBarTheme: const TabBarTheme(indicatorColor: Colors.pink)
+      )
     );
   }
 }
