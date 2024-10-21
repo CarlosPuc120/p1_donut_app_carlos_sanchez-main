@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:p1_donut_app_carlos_sanchez/pages/home_pages.dart';
-
 void main() {
   runApp(const MainApp());
 }
@@ -11,9 +10,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const HomePages(),
       theme: ThemeData(
-        tabBarTheme: const TabBarTheme(indicatorColor: Colors.pink)
+      tabBarTheme: const TabBarTheme(indicatorColor: Colors.pink)
       )
     );
   }

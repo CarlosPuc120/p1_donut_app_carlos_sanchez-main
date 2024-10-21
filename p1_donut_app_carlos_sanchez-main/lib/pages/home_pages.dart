@@ -12,27 +12,32 @@ class HomePages extends StatefulWidget {
   State<HomePages> createState() => _HomePagesState();
 }
 
-class _HomePagesState extends State <HomePages> {
+class _HomePagesState extends State<HomePages> {
   List<Widget> myTabs = [
     //donutTab
-     const MyTab(
+    const MyTab(
       iconPath: 'lib/icons/donut.png',
+      label: 'Donut',
     ),
     //burgerTab
-      const MyTab(
+    const MyTab(
       iconPath: 'lib/icons/burger.png',
+      label: 'Burguer',
     ),
     //smoothieab
     const MyTab(
       iconPath: 'lib/icons/smoothie.png',
+      label: 'Smoothie',
     ),
     //pancakeTab
     const MyTab(
       iconPath: 'lib/icons/pancakes.png',
+      label: 'PanCake',
     ),
     //pizzaTab
     const MyTab(
       iconPath: 'lib/icons/pizza.png',
+      label: 'Pizza',
     ),
   ];
 
