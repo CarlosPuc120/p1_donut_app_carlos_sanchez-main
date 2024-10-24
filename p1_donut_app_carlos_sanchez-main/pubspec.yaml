@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  logger: ^2.4.0
+  provider: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -21,3 +23,10 @@ flutter:
   assets:
   - lib/images/
   - lib/icons/
+  - lib/images/Pancakes/
+  - lib/images/Pizza/
+  - lib/images/Smoothie/
+  - lib/images/Burger/
+
+  
+  

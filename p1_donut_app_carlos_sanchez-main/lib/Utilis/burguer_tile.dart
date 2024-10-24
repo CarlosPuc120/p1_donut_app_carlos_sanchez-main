@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 
-
-class DonutTile extends StatelessWidget {
-  final String donutFlavor;
-  final String donutPrice;
-  final dynamic donutColor;
+class BurgerTile extends StatelessWidget {
+  final String burgerFlavor;
+  final String burgerPrice;
+  final dynamic burgerColor;
   final String imageName;
   final VoidCallback onAddToCart; // Callback para agregar al carrito
   final VoidCallback onFavoriteToggle; // Callback para cambiar el estado del favorito
 
   // Constructor para recibir los valores
-  const DonutTile({
+  const BurgerTile({
     super.key, 
-    required this.donutFlavor,
-    required this.donutPrice,
-    required this.donutColor,
+    required this.burgerFlavor,
+    required this.burgerPrice,
+    required this.burgerColor,
     required this.imageName,
     required this.onAddToCart,
     required this.onFavoriteToggle, // Para manejar el icono de favorito
@@ -25,23 +24,23 @@ class DonutTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(12),
       child: Container(
-        decoration: BoxDecoration(color: donutColor [100], borderRadius: BorderRadius.circular(24)),
+        decoration: BoxDecoration(color: burgerColor [100], borderRadius: BorderRadius.circular(24)),
       child: Column(
         children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [Container(
-            decoration: BoxDecoration(color: donutColor[200], 
+            decoration: BoxDecoration(color: burgerColor[200], 
             borderRadius: const BorderRadius.only(
               topRight: Radius.circular(24), 
               bottomLeft: Radius.circular(24))),
             padding: 
             const EdgeInsets.symmetric(vertical: 8,horizontal: 18),
-            child: Text("\$$donutPrice",
+            child: Text("\$$burgerPrice",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: donutColor[800]
+                  color: burgerColor[800]
                 ),),
           )],),
               //Donut picture
@@ -52,7 +51,7 @@ class DonutTile extends StatelessWidget {
                 child: Image.asset(imageName),
               ),
               //Donut flavor Tex
-              Text(donutFlavor,
+              Text(burgerFlavor,
               style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold

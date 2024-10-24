@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:p1_donut_app_carlos_sanchez/pages/home_pages.dart';
+import 'package:provider/provider.dart';
+import 'car/car_model.dart';
 void main() {
-  runApp(const MainApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => CartModel()),
+      ],
+      child: const MainApp(),),);
 }
 
 class MainApp extends StatelessWidget {
